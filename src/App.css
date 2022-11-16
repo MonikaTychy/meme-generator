@@ -1,3 +1,13 @@
+:root {
+  --purpleBackground: linear-gradient(90deg, #672280 1.18%, #A626D3 100%); 
+  --borderRadius: 5px;
+  --border: 1px solid #D5D4D8;
+}
+
+main {
+  padding: 36px;
+}
+
 .App {
   margin: 0;
 }
@@ -6,7 +16,7 @@
   height: 65px;
   display: flex;
   align-items: center;
-  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  background: var(--purpleBackground);
   color: #FFFFFF;
   padding: 20px;
 }
@@ -23,8 +33,24 @@
   margin-right: auto;
 }
 
-.header h4 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 12px;
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40px 40px; 
+  column-gap: 17px;
+  row-gap: 15px;
+}
+
+.form-input {
+   border-radius: var(--borderRadius);
+   border: var(--border);
+   text-indent: 5px;
+}
+
+.form-button {
+  grid-column: 1 / -1;
+  background: var(--purpleBackground);
+  color: #FFFFFF;
+  border-radius: var(--borderRadius);
+  border: none;
 }
